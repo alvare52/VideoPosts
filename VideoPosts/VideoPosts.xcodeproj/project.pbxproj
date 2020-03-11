@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		1BE7803E241983180077B8D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE7803D241983180077B8D3 /* AppDelegate.swift */; };
 		1BE78040241983180077B8D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE7803F241983180077B8D3 /* SceneDelegate.swift */; };
-		1BE78042241983180077B8D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE78041241983180077B8D3 /* ViewController.swift */; };
 		1BE78045241983180077B8D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE78043241983180077B8D3 /* Main.storyboard */; };
 		1BE780472419831B0077B8D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE780462419831B0077B8D3 /* Assets.xcassets */; };
 		1BE7804A2419831B0077B8D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE780482419831B0077B8D3 /* LaunchScreen.storyboard */; };
+		1BE78052241987F60077B8D3 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE78051241987F60077B8D3 /* CameraPreviewView.swift */; };
+		1BE7805424198CB90077B8D3 /* AudioPostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE7805324198CB90077B8D3 /* AudioPostsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1BE7803A241983180077B8D3 /* VideoPosts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPosts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE7803D241983180077B8D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BE7803F241983180077B8D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1BE78041241983180077B8D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1BE78044241983180077B8D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BE780462419831B0077B8D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BE780492419831B0077B8D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BE7804B2419831B0077B8D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BE78051241987F60077B8D3 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
+		1BE7805324198CB90077B8D3 /* AudioPostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPostsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				1BE7803D241983180077B8D3 /* AppDelegate.swift */,
 				1BE7803F241983180077B8D3 /* SceneDelegate.swift */,
-				1BE78041241983180077B8D3 /* ViewController.swift */,
 				1BE78043241983180077B8D3 /* Main.storyboard */,
 				1BE780462419831B0077B8D3 /* Assets.xcassets */,
 				1BE780482419831B0077B8D3 /* LaunchScreen.storyboard */,
 				1BE7804B2419831B0077B8D3 /* Info.plist */,
+				1BE78051241987F60077B8D3 /* CameraPreviewView.swift */,
+				1BE7805324198CB90077B8D3 /* AudioPostsTableViewController.swift */,
 			);
 			path = VideoPosts;
 			sourceTree = "<group>";
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BE78042241983180077B8D3 /* ViewController.swift in Sources */,
+				1BE7805424198CB90077B8D3 /* AudioPostsTableViewController.swift in Sources */,
+				1BE78052241987F60077B8D3 /* CameraPreviewView.swift in Sources */,
 				1BE7803E241983180077B8D3 /* AppDelegate.swift in Sources */,
 				1BE78040241983180077B8D3 /* SceneDelegate.swift in Sources */,
 			);
