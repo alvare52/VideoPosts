@@ -148,7 +148,7 @@ class CameraViewController: UIViewController {
             // Stop
             fileOutput.stopRecording()
             print("stopped recording, storedURL = \(storedURL)")
-            present(alertController, animated: true)/////
+            present(alertController, animated: true)
         } else {
             // Start
             // FIXME: Store URL
@@ -217,7 +217,7 @@ extension CameraViewController: AVCaptureFileOutputRecordingDelegate {
             return
         }
         
-        playMovie(url: outputFileURL)
+        //playMovie(url: outputFileURL)
     }
     
     func fileOutput(_ output: AVCaptureFileOutput, didStartRecordingTo fileURL: URL, from connections: [AVCaptureConnection]) {

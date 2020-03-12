@@ -69,14 +69,28 @@
                     <view key="view" contentMode="scaleToFill" id="lL5-aj-4n3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPX-5Q-ppo">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hPX-5Q-ppo" secondAttribute="bottom" id="6BN-Ky-Hps"/>
+                            <constraint firstItem="hPX-5Q-ppo" firstAttribute="top" secondItem="UCG-F8-n8y" secondAttribute="top" id="Kn9-EM-ufP"/>
+                            <constraint firstItem="hPX-5Q-ppo" firstAttribute="trailing" secondItem="UCG-F8-n8y" secondAttribute="trailing" id="Vnj-Rg-Q13"/>
+                            <constraint firstItem="hPX-5Q-ppo" firstAttribute="leading" secondItem="UCG-F8-n8y" secondAttribute="leading" id="hEu-0o-9f2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UCG-F8-n8y"/>
                     </view>
                     <navigationItem key="navigationItem" id="oTZ-qI-cCQ"/>
+                    <connections>
+                        <outlet property="screenView" destination="hPX-5Q-ppo" id="dcd-xZ-ZGu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sz1-VM-m2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1194" y="109"/>
+            <point key="canvasLocation" x="1192.753623188406" y="108.48214285714285"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="9e5-aM-Y2H">
@@ -91,7 +105,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwM-Ee-tPz">
                                         <rect key="frame" x="149" y="680" width="116" height="116"/>
-                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="Record"/>
                                         <state key="selected" image="Stop"/>
                                         <connections>
@@ -99,7 +113,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="mwM-Ee-tPz" firstAttribute="centerX" secondItem="UQ3-FY-iO8" secondAttribute="centerX" id="Kl1-Dc-FBE"/>
                                     <constraint firstAttribute="bottom" secondItem="mwM-Ee-tPz" secondAttribute="bottom" constant="100" id="SLx-68-XVg"/>

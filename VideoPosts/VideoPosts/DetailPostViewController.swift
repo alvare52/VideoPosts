@@ -17,13 +17,18 @@ class DetailPostViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var screenView: UIView!
+    
     var player: AVPlayer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         updateViews()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
         view.addGestureRecognizer(tapGesture)
+        guard let post = post else {return}
+        playMovie(url: post.url)
     }
     
     func updateViews() {
@@ -37,7 +42,7 @@ class DetailPostViewController: UIViewController {
         guard let post = post else { return }
         switch(tapGesture.state) {
         case .ended:
-            playMovie(url: post.url)/////replayMovie()
+        replayMovie()
         default:
             print("Handled other states: \(tapGesture.state)")
         }
@@ -50,7 +55,8 @@ class DetailPostViewController: UIViewController {
         topRect.size.height = topRect.height // / 4
         topRect.size.width = topRect.width  // / 4 ///
         topRect.origin.y = view.layoutMargins.top
-        playerLayer.frame = topRect
+        //playerLayer.frame = topRect
+        playerLayer.frame = screenView.frame
         view.layer.addSublayer(playerLayer) // this is stacking layers (BAD)
         player.play()
     }

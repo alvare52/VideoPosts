@@ -21,8 +21,7 @@ struct Post {
 // MARK: - Model Controller
 
 class PostController {
-    //var posts: [Post] = [Post(title: "Test Title", timestamp: Date()), url: URL("shit")]
-    var posts: [Post] = [Post(title: "Test Title", timestamp: Date(), url: URL(fileURLWithPath: "shit"))]
+    var posts: [Post] = []
 }
 
 // MARK: - View Controller
