@@ -87,14 +87,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQ3-FY-iO8" customClass="CameraPreviewView" customModule="VideoPosts" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="414" height="856"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwM-Ee-tPz">
                                         <rect key="frame" x="149" y="680" width="116" height="116"/>
-                                        <color key="tintColor" red="0.89303421969999996" green="0.13260403279999999" blue="0.13222166899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="Record">
-                                            <color key="titleColor" red="0.89303421969999996" green="0.13260403279999999" blue="0.13222166899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
+                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="Record"/>
                                         <state key="selected" image="Stop"/>
                                         <connections>
                                             <action selector="recordTapped:" destination="PwS-s8-prC" eventType="touchUpInside" id="frZ-yg-QDw"/>
@@ -104,16 +102,16 @@
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="mwM-Ee-tPz" firstAttribute="centerX" secondItem="UQ3-FY-iO8" secondAttribute="centerX" id="Kl1-Dc-FBE"/>
-                                    <constraint firstAttribute="bottom" secondItem="mwM-Ee-tPz" secondAttribute="bottom" constant="60" id="SLx-68-XVg"/>
+                                    <constraint firstAttribute="bottom" secondItem="mwM-Ee-tPz" secondAttribute="bottom" constant="100" id="SLx-68-XVg"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="TBO-FE-Qht" firstAttribute="trailing" secondItem="UQ3-FY-iO8" secondAttribute="trailing" id="O1f-Ek-Gkr"/>
-                            <constraint firstItem="UQ3-FY-iO8" firstAttribute="top" secondItem="OXm-UO-rxx" secondAttribute="top" constant="20" symbolic="YES" id="Pmy-Lg-UpM"/>
-                            <constraint firstAttribute="bottom" secondItem="UQ3-FY-iO8" secondAttribute="bottom" constant="20" symbolic="YES" id="pLF-0F-Smu"/>
-                            <constraint firstItem="UQ3-FY-iO8" firstAttribute="leading" secondItem="TBO-FE-Qht" secondAttribute="leading" constant="20" symbolic="YES" id="zTJ-Xf-LDX"/>
+                            <constraint firstItem="UQ3-FY-iO8" firstAttribute="top" secondItem="OXm-UO-rxx" secondAttribute="top" id="Pmy-Lg-UpM"/>
+                            <constraint firstAttribute="bottom" secondItem="UQ3-FY-iO8" secondAttribute="bottom" id="pLF-0F-Smu"/>
+                            <constraint firstItem="UQ3-FY-iO8" firstAttribute="leading" secondItem="TBO-FE-Qht" secondAttribute="leading" id="zTJ-Xf-LDX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TBO-FE-Qht"/>
                     </view>
@@ -124,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZv-aA-Ezk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="474" y="808"/>
+            <point key="canvasLocation" x="473.91304347826093" y="807.58928571428567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dtP-GS-yOy">

@@ -15,13 +15,14 @@ import UIKit
 struct Post {
     var title: String
     var timestamp: Date
-    //var url: URL
+    var url: URL
 }
 
 // MARK: - Model Controller
 
 class PostController {
-    var posts: [Post] = [Post(title: "Test Title", timestamp: Date())]
+    //var posts: [Post] = [Post(title: "Test Title", timestamp: Date()), url: URL("shit")]
+    var posts: [Post] = [Post(title: "Test Title", timestamp: Date(), url: URL(fileURLWithPath: "shit"))]
 }
 
 // MARK: - View Controller
@@ -86,9 +87,10 @@ class AudioPostsTableViewController: UITableViewController {
 
 // 5
 extension AudioPostsTableViewController: VideoPostDelegate {
-    func didCreatePost(title: String) {
-        print("received a new post: \(title)")
+    func didCreatePost(post: Post) {
+        print("received a new post: \(post)")
         // do something...
+        postController.posts.append(post)
         tableView.reloadData()
     }
 }
