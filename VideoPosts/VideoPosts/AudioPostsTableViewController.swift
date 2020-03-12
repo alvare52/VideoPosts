@@ -80,7 +80,11 @@ class AudioPostsTableViewController: UITableViewController {
         
         // SHOW
         if segue.identifier == "ShowPostSegue" {
-            
+            print("ShowPostSegue")
+            if let detailVC = segue.destination as? DetailPostViewController, let indexPath = tableView.indexPathForSelectedRow {
+                // 4
+                detailVC.post = postController.posts[indexPath.row]
+            }
         }
     }
 }

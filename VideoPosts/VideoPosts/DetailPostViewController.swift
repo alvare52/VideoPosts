@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class DetailPostViewController: UIViewController {
     
@@ -15,16 +16,54 @@ class DetailPostViewController: UIViewController {
             updateViews()
         }
     }
+    
+    var player: AVPlayer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
+        view.addGestureRecognizer(tapGesture)
     }
     
     func updateViews() {
         guard isViewLoaded else { return }
+        print(post ?? Post(title: "empty post", timestamp: Date(), url: URL(fileURLWithPath: "shit")))
         title = post?.title ?? "Post"
     }
+    
+    @objc func handleTapGesture(_ tapGesture: UITapGestureRecognizer) {
+        print("tap")
+        guard let post = post else { return }
+        switch(tapGesture.state) {
+        case .ended:
+            playMovie(url: post.url)/////replayMovie()
+        default:
+            print("Handled other states: \(tapGesture.state)")
+        }
+    }
+    
+    func playMovie(url: URL) {
+        player = AVPlayer(url: url)
+        let playerLayer = AVPlayerLayer(player: player)
+        var topRect = view.bounds
+        topRect.size.height = topRect.height // / 4
+        topRect.size.width = topRect.width  // / 4 ///
+        topRect.origin.y = view.layoutMargins.top
+        playerLayer.frame = topRect
+        view.layer.addSublayer(playerLayer) // this is stacking layers (BAD)
+        player.play()
+    }
+    
+    func replayMovie() {
+        guard let player = player else { return }
+        
+        // Go back to beginning
+        player.seek(to: CMTime.zero)
+        //CMTime(seconds: 2, preferredTimescale: 30) // 30 Frames per second (FPS)
+        player.play()
+    }
+    
     /*
     // MARK: - Navigation
 
