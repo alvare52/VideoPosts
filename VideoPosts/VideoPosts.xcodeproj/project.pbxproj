@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B56790E241B33850021454B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B56790D241B33850021454B /* MapViewController.swift */; };
 		1BE7803E241983180077B8D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE7803D241983180077B8D3 /* AppDelegate.swift */; };
 		1BE78040241983180077B8D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE7803F241983180077B8D3 /* SceneDelegate.swift */; };
 		1BE78045241983180077B8D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE78043241983180077B8D3 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B56790D241B33850021454B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1BE7803A241983180077B8D3 /* VideoPosts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPosts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE7803D241983180077B8D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BE7803F241983180077B8D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				1BE78055241991D80077B8D3 /* DetailPostViewController.swift */,
 				1BE78057241992AE0077B8D3 /* CameraViewController.swift */,
 				1BE78051241987F60077B8D3 /* CameraPreviewView.swift */,
+				1B56790D241B33850021454B /* MapViewController.swift */,
 				1BE780592419954C0077B8D3 /* Junk */,
 			);
 			path = VideoPosts;
@@ -161,6 +164,7 @@
 				1BE78040241983180077B8D3 /* SceneDelegate.swift in Sources */,
 				1BE78056241991D80077B8D3 /* DetailPostViewController.swift in Sources */,
 				1BE78058241992AE0077B8D3 /* CameraViewController.swift in Sources */,
+				1B56790E241B33850021454B /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

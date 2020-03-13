@@ -9,18 +9,40 @@
 // ShowPostSegue
 // AddPostSegue
 import UIKit
-
+import MapKit
 // MARK: - Model
 
-struct Post {
-    var title: String
+// NEW (used to be a struct)
+class Post: NSObject, MKAnnotation {
+    
+    // NEW
+    var title: String?
     var timestamp: Date
     var url: URL
+    
+    // NEW
+    var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: 36.1, longitude: 115.1)
+    }
+    
+    // NEW
+    var subtitle: String? {
+        return "Date: "
+    }
+    
+    // NEW
+    init(title: String, timestamp: Date, url: URL) {
+        self.title = title
+        self.timestamp = timestamp
+        self.url = url
+    }
 }
 
 // MARK: - Model Controller
 
 class PostController {
+    // NEW
+    var userLocation: CLLocationCoordinate2D?
     var posts: [Post] = []
 }
 
@@ -46,6 +68,7 @@ class AudioPostsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        performSegue(withIdentifier: "ShowMapSegue", sender: self)
     }
 
     // MARK: - Table view data source

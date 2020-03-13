@@ -7,6 +7,36 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Video Posts Map-->
+        <scene sceneID="h5e-SE-xAb">
+            <objects>
+                <viewController id="GPo-si-27m" customClass="MapViewController" customModule="VideoPosts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rp3-cK-u8g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TVo-Xz-bAs">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="TVo-Xz-bAs" secondAttribute="trailing" constant="-20" id="MZ9-XX-ZhJ"/>
+                            <constraint firstItem="TVo-Xz-bAs" firstAttribute="top" secondItem="rp3-cK-u8g" secondAttribute="topMargin" id="cf3-xa-2OX"/>
+                            <constraint firstItem="TVo-Xz-bAs" firstAttribute="leading" secondItem="rp3-cK-u8g" secondAttribute="leadingMargin" constant="-20" id="p4h-T6-7aR"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="TVo-Xz-bAs" secondAttribute="bottom" constant="-34" id="t2d-Kl-fNO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w2M-gO-fBu"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Video Posts Map" id="LeC-KC-Kom"/>
+                    <connections>
+                        <outlet property="mapView" destination="TVo-Xz-bAs" id="riJ-jr-aYJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3kr-hJ-pGj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="482.60869565217394" y="-550.44642857142856"/>
+        </scene>
         <!--Video Posts-->
         <scene sceneID="uda-6D-ecR">
             <objects>
@@ -50,6 +80,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Video Posts" id="yoq-HS-dSY">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="map" catalog="system" id="1Kt-zW-ice">
+                            <connections>
+                                <segue destination="GPo-si-27m" kind="show" identifier="ShowMapSegue" id="Cx7-R7-Qbm"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="gJu-iK-izS">
                             <connections>
                                 <action selector="cameraButtonTapped:" destination="JFg-ea-g9B" id="wbR-ik-CI6"/>
@@ -160,5 +195,6 @@
     <resources>
         <image name="Record" width="116" height="116"/>
         <image name="Stop" width="116" height="116"/>
+        <image name="map" catalog="system" width="64" height="56"/>
     </resources>
 </document>
