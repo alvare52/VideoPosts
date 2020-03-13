@@ -33,7 +33,7 @@ class CameraViewController: UIViewController {
             print(postTitle)
             //print(self.tf?.text ?? "")
             // 3
-            self.videoPostDelegate.didCreatePost(post: Post(title: postTitle, timestamp: Date(), url: self.storedURL!))
+            self.videoPostDelegate.didCreatePost(post: Post(comment: postTitle, timestamp: Date(), url: self.storedURL!))
             //self.saveCalorieIntake()
             self.tf?.text = ""
             self.dismiss(animated: true, completion: nil)

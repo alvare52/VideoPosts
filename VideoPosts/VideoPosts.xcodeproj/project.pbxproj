@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1B56790E241B33850021454B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B56790D241B33850021454B /* MapViewController.swift */; };
+		1B567910241BCB850021454B /* Post+MKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B56790F241BCB850021454B /* Post+MKAnnotation.swift */; };
+		1B567944241BE96C0021454B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B567943241BE96B0021454B /* MapKit.framework */; };
 		1BE7803E241983180077B8D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE7803D241983180077B8D3 /* AppDelegate.swift */; };
 		1BE78040241983180077B8D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE7803F241983180077B8D3 /* SceneDelegate.swift */; };
 		1BE78045241983180077B8D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE78043241983180077B8D3 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		1B56790D241B33850021454B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1B56790F241BCB850021454B /* Post+MKAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+MKAnnotation.swift"; sourceTree = "<group>"; };
+		1B567943241BE96B0021454B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1BE7803A241983180077B8D3 /* VideoPosts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPosts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE7803D241983180077B8D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BE7803F241983180077B8D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,17 +43,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B567944241BE96C0021454B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B567942241BE96B0021454B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B567943241BE96B0021454B /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1BE78031241983180077B8D3 = {
 			isa = PBXGroup;
 			children = (
 				1BE7803C241983180077B8D3 /* VideoPosts */,
 				1BE7803B241983180077B8D3 /* Products */,
+				1B567942241BE96B0021454B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +85,7 @@
 				1BE78051241987F60077B8D3 /* CameraPreviewView.swift */,
 				1B56790D241B33850021454B /* MapViewController.swift */,
 				1BE780592419954C0077B8D3 /* Junk */,
+				1B56790F241BCB850021454B /* Post+MKAnnotation.swift */,
 			);
 			path = VideoPosts;
 			sourceTree = "<group>";
@@ -164,6 +179,7 @@
 				1BE78040241983180077B8D3 /* SceneDelegate.swift in Sources */,
 				1BE78056241991D80077B8D3 /* DetailPostViewController.swift in Sources */,
 				1BE78058241992AE0077B8D3 /* CameraViewController.swift in Sources */,
+				1B567910241BCB850021454B /* Post+MKAnnotation.swift in Sources */,
 				1B56790E241B33850021454B /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

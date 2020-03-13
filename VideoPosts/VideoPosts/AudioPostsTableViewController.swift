@@ -10,33 +10,34 @@
 // AddPostSegue
 import UIKit
 import MapKit
+import Foundation
 // MARK: - Model
 
 // NEW (used to be a struct)
-class Post: NSObject, MKAnnotation {
+class Post: NSObject {
     
-    // NEW
-    var title: String?
+   
     var timestamp: Date
     var url: URL
+    var comment: String
+    
+//    // NEW
+//    @objc dynamic var coordinate: CLLocationCoordinate2D {
+//        return currentLocation
+//    }
     
     // NEW
-    var coordinate: CLLocationCoordinate2D {
-        return CLLocationCoordinate2D(latitude: 36.1, longitude: 115.1)
-    }
-    
-    // NEW
-    var subtitle: String? {
-        return "Date: "
-    }
-    
-    // NEW
-    init(title: String, timestamp: Date, url: URL) {
-        self.title = title
+    init(comment: String, timestamp: Date, url: URL) {
+        //self.title = title
+        self.comment = comment
         self.timestamp = timestamp
         self.url = url
+        
+        super.init()
     }
 }
+
+
 
 // MARK: - Model Controller
 
@@ -108,6 +109,13 @@ class AudioPostsTableViewController: UITableViewController {
                 detailVC.post = postController.posts[indexPath.row]
             }
         }
+        
+        if segue.identifier == "ShowMapSegue" {
+            print("ShowMapSegue")
+            if let mapVC = segue.destination as? MapViewController {
+                mapVC.postController = self.postController
+            }
+        }
     }
 }
 
@@ -117,6 +125,7 @@ extension AudioPostsTableViewController: VideoPostDelegate {
         print("received a new post: \(post)")
         // do something...
         postController.posts.append(post)
+        print(post.coordinate)
         tableView.reloadData()
     }
 }

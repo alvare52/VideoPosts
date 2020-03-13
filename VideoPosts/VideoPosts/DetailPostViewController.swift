@@ -33,7 +33,7 @@ class DetailPostViewController: UIViewController {
     
     func updateViews() {
         guard isViewLoaded else { return }
-        print(post ?? Post(title: "empty post", timestamp: Date(), url: URL(fileURLWithPath: "shit")))
+        print(post ?? Post(comment: "empty post", timestamp: Date(), url: URL(fileURLWithPath: "shit")))
         title = post?.title ?? "Post"
     }
     
